@@ -7,11 +7,31 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Box.h"
+
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        Box *box1 = [[Box alloc] initWithHeight: 4 width: 5 andLength: 6];
+        Box *box2 = [[Box alloc] initWithHeight: 4 width: 5 andLength: 6];
+        
+        float volume1 = [box1 volume];
+        float volume2 = [box2 volume];
+        
+        NSLog (@"The volume of the box 1 is: %.2f", volume1);
+        NSLog (@"The volume of the box 2 is: %.2f", volume2);
+        
+        float factor = [box1 fitBox: box2];
+        
+        if (factor > 1)
+            NSLog (@"Box 1 will fit %.2f times in box 2", 1 / factor);
+        else if (factor < 1)
+            NSLog (@"Box 1 will fit %.2f times in box 2", 1 / factor);
+        else
+            NSLog (@"Both boxes have the same size and will fit %.2f time in each other", factor);
+            
     }
     return 0;
 }
