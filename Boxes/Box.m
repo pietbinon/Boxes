@@ -46,7 +46,7 @@
     return fit;
     
 //    //Same thing
-//    return (CGfloat) self.volume / anotherBox.volume;
+//    return self.volume / anotherBox.volume;
 }
 
 @end
