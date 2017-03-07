@@ -14,8 +14,8 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Box *box1 = [[Box alloc] initWithHeight: 4 width: 5 andLength: 6];
-        Box *box2 = [[Box alloc] initWithHeight: 4 width: 5 andLength: 6];
+        Box *box1 = [[Box alloc] initWithHeight: 3 width: 4 andLength: 5];
+        Box *box2 = [[Box alloc] initWithHeight: 2 width: 3 andLength: 4];
         
         float volume1 = [box1 volume];
         float volume2 = [box2 volume];
@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
         float factor = [box1 fitBox: box2];
         
         if (factor > 1)
-            NSLog (@"Box 1 will fit %.2f times in box 2", 1 / factor);
+            NSLog (@"Box 2 will fit %.2f times in box 1", factor);
         else if (factor < 1)
             NSLog (@"Box 1 will fit %.2f times in box 2", 1 / factor);
         else
