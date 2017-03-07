@@ -12,7 +12,8 @@
 
 @implementation Box
 
-- (instancetype) initWithHeight: (float) height width: (float) width andLength: (float) length {
+
+- (instancetype) initWithHeight: (CGFloat) height width: (CGFloat) width andLength: (CGFloat) length {
     self = [super init];
     
     if (self) {
@@ -24,18 +25,28 @@
 }
 
 
-- (float) volume {
-    float volume = self.height * self.width * self.length;
+
+
+- (CGFloat) volume {
+    CGFloat volume = self.height * self.width * self.length;
     return volume;
 }
 
+////Similar to previous method
+//- (CGFloat) volume {
+//    _volume = self.width * self.length * self.height;
+//    return self.volume;
+//}
 
-- (float) fitBox: (Box *) anotherBox {
-    float fit = self.volume / anotherBox.volume;
+
+
+
+- (CGFloat) fitBox: (Box *) anotherBox {
+    CGFloat fit = self.volume / anotherBox.volume;
     return fit;
     
 //    //Same thing
-//    return (float) self.volume / anotherBox.volume;
+//    return (CGfloat) self.volume / anotherBox.volume;
 }
 
 @end

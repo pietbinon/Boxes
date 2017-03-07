@@ -12,13 +12,14 @@
 
 @interface Box : NSObject
 
-@property (nonatomic) float height;
-@property (nonatomic) float width;
-@property (nonatomic) float length;
+@property (nonatomic) CGFloat height;
+@property (nonatomic) CGFloat width;
+@property (nonatomic) CGFloat length;
+//@property (nonatomic) CGFloat volume;
 
-- (instancetype) initWithHeight: (float) height width: (float) width andLength: (float) length;
-- (float) volume;
+- (instancetype) initWithHeight: (CGFloat) height width: (CGFloat) width andLength: (CGFloat) length;
+- (CGFloat) volume;
 
-- (float) fitBox: (Box *) anotherBox;
+- (CGFloat) fitBox: (Box *) anotherBox;
 
 @end

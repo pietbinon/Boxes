@@ -17,13 +17,13 @@ int main(int argc, const char * argv[]) {
         Box *box1 = [[Box alloc] initWithHeight: 3 width: 4 andLength: 5];
         Box *box2 = [[Box alloc] initWithHeight: 2 width: 3 andLength: 4];
         
-        float volume1 = [box1 volume];
-        float volume2 = [box2 volume];
+        CGFloat volume1 = [box1 volume];
+        CGFloat volume2 = [box2 volume];
         
         NSLog (@"The volume of the box 1 is: %.2f", volume1);
         NSLog (@"The volume of the box 2 is: %.2f", volume2);
         
-        float factor = [box1 fitBox: box2];
+        CGFloat factor = [box1 fitBox: box2];
         
         if (factor > 1)
             NSLog (@"Box 2 will fit %.2f times in box 1", factor);
